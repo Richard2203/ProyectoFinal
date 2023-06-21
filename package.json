@@ -1,23 +1,31 @@
 {
-  "name": "proyectoffinal",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "directories": {
-    "lib": "lib"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Richard2203/ProyectoFinal.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Richard2203/ProyectoFinal/issues"
-  },
-  "homepage": "https://github.com/Richard2203/ProyectoFinal#readme"
+	"name": "proyectoffinal",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"directories": {
+		"lib": "lib"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "nodemon src/index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Richard2203/ProyectoFinal.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Richard2203/ProyectoFinal/issues"
+	},
+	"homepage": "https://github.com/Richard2203/ProyectoFinal#readme",
+	"dependencies": {
+		"express": "^4.18.2",
+		"pg": "^8.11.0"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.22"
+	}
 }
