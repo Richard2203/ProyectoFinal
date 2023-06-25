@@ -1,276 +1,526 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>eXcelPC</title>
+		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+		<meta content="" name="keywords" />
+		<meta content="" name="description" />
 
-<head>
-    <meta charset="utf-8">
-    <title>eXcelPC</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+		<!-- Favicon -->
+		<link href="img/favicon.ico" rel="icon" />
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+		<!-- Google Web Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@500;700&display=swap"
+			rel="stylesheet"
+		/>
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@500;700&display=swap"
-        rel="stylesheet">
+		<!-- Icon Font Stylesheet -->
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+			rel="stylesheet"
+		/>
 
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+		<!-- Libraries Stylesheet -->
+		<link href="lib/animate/animate.min.css" rel="stylesheet" />
+		<link
+			href="lib/owlcarousel/assets/owl.carousel.min.css"
+			rel="stylesheet"
+		/>
+		<link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+		<!-- Customized Bootstrap Stylesheet -->
+		<link href="css/bootstrap.min.css" rel="stylesheet" />
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+		<!-- Template Stylesheet -->
+		<link href="css/style.css" rel="stylesheet" />
+	</head>
 
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-</head>
+	<body>
+		<!-- Spinner Start -->
+		<div
+			id="spinner"
+			class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+		>
+			<div
+				class="spinner-border text-primary"
+				role="status"
+				style="width: 3rem; height: 3rem"
+			></div>
+		</div>
+		<!-- Spinner End -->
 
-<body>
-    <!-- Spinner Start -->
-    <div id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
-    </div>
-    <!-- Spinner End -->
+		<!-- Topbar Start -->
+		<div class="container-fluid bg-primary text-white d-none d-lg-flex">
+			<div class="container py-3">
+				<div class="d-flex align-items-center">
+					<a href="index.html">
+						<h2 class="text-white fw-bold m-0">eXcelPC</h2>
+					</a>
+					<div class="ms-auto d-flex align-items-center">
+						<small class="ms-4"
+							><i class="fa fa-map-marker-alt me-3"></i
+							>Lindavista, CDMX</small
+						>
+						<small class="ms-4"
+							><i class="fa fa-envelope me-3"></i
+							>excelpc@gmail.com</small
+						>
+						<small class="ms-4"
+							><i class="fa fa-phone-alt me-3"></i>55 4564
+							5454</small
+						>
+						<div class="ms-3 d-flex">
+							<a
+								class="btn btn-sm-square btn-light text-primary rounded-circle ms-2"
+								href="https://es-la.facebook.com"
+								><i class="fab fa-facebook-f"></i
+							></a>
+							<a
+								class="btn btn-sm-square btn-light text-primary rounded-circle ms-2"
+								href="https://twitter.com/?lang=es"
+								><i class="fab fa-twitter"></i
+							></a>
+							<a
+								class="btn btn-sm-square btn-light text-primary rounded-circle ms-2"
+								href="https://www.linkedin.com/authwall?trk=qf&original_referer=https://mx.linkedin.com/&sessionRedirect=https%3A%2F%2Fmx.linkedin.com%2F%3Foriginal_referer%3Dhttps%253A%252F%252Fwww.google.com%252F"
+								><i class="fab fa-linkedin-in"></i
+							></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Topbar End -->
 
+		<!-- Navbar Start -->
+		<div class="container-fluid bg-white sticky-top">
+			<div class="container">
+				<nav
+					class="navbar navbar-expand-lg bg-white navbar-light p-lg-0"
+				>
+					<a href="index.html" class="navbar-brand d-lg-none">
+						<h1 class="fw-bold m-0">eXcelPC </h1>
+					</a>
+					<button
+						type="button"
+						class="navbar-toggler me-0"
+						data-bs-toggle="collapse"
+						data-bs-target="#navbarCollapse"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarCollapse">
+						<div class="navbar-nav">
+							<a href="index.html" class="nav-item nav-link"
+								>Inicio</a
+							>
+							<a href="about.html" class="nav-item nav-link"
+								>Acerca de</a
+							>
+							<a href="blog.html" class="nav-item nav-link"
+								>Blog</a
+							>
+							<a href="project.html" class="nav-item nav-link"
+								>Proyectos</a
+							>
+							<a href="team.html" class="nav-item nav-link active"
+								>Equipo</a
+							>
+							<a href="testimonial.html" class="nav-item nav-link"
+								>Testimonios</a
+							>
+							<div class="nav-item dropdown">
+								<a
+									href="#"
+									class="nav-link dropdown-toggle"
+									data-bs-toggle="dropdown"
+									>Servicios</a
+								>
+								<div
+									class="dropdown-menu bg-light rounded-0 rounded-bottom m-0"
+								>
+									<a href="service.html" class="dropdown-item"
+										>Nuestros servicios</a
+									>
+									<a
+										href="ensambles.html"
+										class="dropdown-item"
+										>Ensambles</a
+									>
+									<a href="laptops.html" class="dropdown-item"
+										>Computadoras y Laptops</a
+									>
+									<a href="piezas.html" class="dropdown-item"
+										>Piezas</a
+									>
+								</div>
+							</div>
+							<a href="contact.html" class="nav-item nav-link"
+								>Contacto</a
+							>
+							<a href="crud_admi.html" class="nav-item nav-link">
+								administrador
+							</a>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<!-- Navbar End -->
 
-    <!-- Topbar Start -->
-    <div class="container-fluid bg-primary text-white d-none d-lg-flex">
-        <div class="container py-3">
-            <div class="d-flex align-items-center">
-                <a href="index.html">
-                    <h2 class="text-white fw-bold m-0">eXcelPC</h2>
-                </a>
-                <div class="ms-auto d-flex align-items-center">
-                    <small class="ms-4"><i class="fa fa-map-marker-alt me-3"></i>Lindavista, CDMX</small>
-                    <small class="ms-4"><i class="fa fa-envelope me-3"></i>excelpc@gmail.com</small>
-                    <small class="ms-4"><i class="fa fa-phone-alt me-3"></i>55 4564 5454</small>
-                    <div class="ms-3 d-flex">
-                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-2" href="https://es-la.facebook.com"><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-2" href="https://twitter.com/?lang=es"><i
-                                class="fab fa-twitter"></i></a>
-                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-2" href="https://www.linkedin.com/authwall?trk=qf&original_referer=https://mx.linkedin.com/&sessionRedirect=https%3A%2F%2Fmx.linkedin.com%2F%3Foriginal_referer%3Dhttps%253A%252F%252Fwww.google.com%252F"><i
-                                class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Topbar End -->
+		<!-- Page Header Start -->
+		<div
+			class="container-fluid page-header py-5 mb-5 wow fadeIn"
+			data-wow-delay="0.1s"
+		>
+			<div class="container text-center py-5">
+				<h1 class="display-2 text-white mb-4 animated slideInDown"
+					>Nuestro equipo</h1
+				>
+				<nav aria-label="breadcrumb animated slideInDown">
+					<ol class="breadcrumb justify-content-center mb-0">
+						<li class="breadcrumb-item"
+							><a href="index.html">Inicio</a></li
+						>
+						<li class="breadcrumb-item"
+							><a href="about.html">Acerca de</a></li
+						>
+						<li class="breadcrumb-item"
+							><a href="blog.html">Blog</a></li
+						>
+						<li class="breadcrumb-item"
+							><a href="project.html">Proyectos</a></li
+						>
+						<li
+							class="breadcrumb-item text-primary"
+							aria-current="page"
+							>Equipo</li
+						>
+						<li class="breadcrumb-item"
+							><a href="testimonial.html">Testimonios</a></li
+						>
+						<li class="breadcrumb-item"
+							><a href="contact.html">Contacto</a></li
+						>
+					</ol>
+				</nav>
+			</div>
+		</div>
+		<!-- Page Header End -->
 
+		<!-- Team Start -->
+		<div class="container-xxl py-5">
+			<div class="container">
+				<div
+					class="text-center mx-auto wow fadeInUp"
+					data-wow-delay="0.1s"
+					style="max-width: 500px"
+				>
+					<p class="fs-5 fw-medium text-primary">Nuestro equipo</p>
+					<h1 class="display-5 mb-5"
+						>Contamos con un grupo de expertos dentro de eXcelPC
+						listos para brindarte un excelente servicio</h1
+					>
+				</div>
+				<div class="row g-4">
+					<div
+						class="col-lg-3 col-md-6 wow fadeInUp"
+						data-wow-delay="0.1s"
+					>
+						<div class="team-item rounded overflow-hidden pb-4">
+							<img
+								class="img-fluid mb-4"
+								src="img/team-1.jpg"
+								alt=""
+							/>
+							<h5>Alex Rodriguez</h5>
+							<span class="text-primary">Fundador & CEO</span>
+							<ul class="team-social">
+								<li
+									><a
+										class="btn btn-square"
+										href="https://es-la.facebook.com"
+										><i class="fab fa-facebook-f"></i></a
+								></li>
+								<li
+									><a
+										class="btn btn-square"
+										href="https://twitter.com/?lang=es"
+										><i class="fab fa-twitter"></i></a
+								></li>
+								<li
+									><a
+										class="btn btn-square"
+										href="https://www.instagram.com"
+										><i class="fab fa-instagram"></i></a
+								></li>
+								<li
+									><a
+										class="btn btn-square"
+										href="https://www.linkedin.com/authwall?trk=qf&original_referer=https://mx.linkedin.com/&sessionRedirect=https%3A%2F%2Fmx.linkedin.com%2F%3Foriginal_referer%3Dhttps%253A%252F%252Fwww.google.com%252F"
+										><i class="fab fa-linkedin-in"></i></a
+								></li>
+							</ul>
+						</div>
+					</div>
+					<div
+						class="col-lg-3 col-md-6 wow fadeInUp"
+						data-wow-delay="0.3s"
+					>
+						<div class="team-item rounded overflow-hidden pb-4">
+							<img
+								class="img-fluid mb-4"
+								src="img/team-2.jpg"
+								alt=""
+							/>
+							<h5>Roberto Gallegos</h5>
+							<span class="text-primary">Co Fundador</span>
+							<ul class="team-social">
+								<li
+									><a
+										class="btn btn-square"
+										href="https://es-la.facebook.com"
+										><i class="fab fa-facebook-f"></i></a
+								></li>
+								<li
+									><a
+										class="btn btn-square"
+										href="https://twitter.com/?lang=es"
+										><i class="fab fa-twitter"></i></a
+								></li>
+								<li
+									><a
+										class="btn btn-square"
+										href="https://www.instagram.com"
+										><i class="fab fa-instagram"></i></a
+								></li>
+								<li
+									><a
+										class="btn btn-square"
+										href="https://www.linkedin.com/authwall?trk=qf&original_referer=https://mx.linkedin.com/&sessionRedirect=https%3A%2F%2Fmx.linkedin.com%2F%3Foriginal_referer%3Dhttps%253A%252F%252Fwww.google.com%252F"
+										><i class="fab fa-linkedin-in"></i></a
+								></li>
+							</ul>
+						</div>
+					</div>
+					<div
+						class="col-lg-3 col-md-6 wow fadeInUp"
+						data-wow-delay="0.5s"
+					>
+						<div class="team-item rounded overflow-hidden pb-4">
+							<img
+								class="img-fluid mb-4"
+								src="img/team-3.jpg"
+								alt=""
+							/>
+							<h5>Mario Castillo</h5>
+							<span class="text-primary">Manager Ejecutivo</span>
+							<ul class="team-social">
+								<li
+									><a
+										class="btn btn-square"
+										href="https://es-la.facebook.com"
+										><i class="fab fa-facebook-f"></i></a
+								></li>
+								<li
+									><a
+										class="btn btn-square"
+										href="https://twitter.com/?lang=es"
+										><i class="fab fa-twitter"></i></a
+								></li>
+								<li
+									><a
+										class="btn btn-square"
+										href="https://www.instagram.com"
+										><i class="fab fa-instagram"></i></a
+								></li>
+								<li
+									><a
+										class="btn btn-square"
+										href="https://www.linkedin.com/authwall?trk=qf&original_referer=https://mx.linkedin.com/&sessionRedirect=https%3A%2F%2Fmx.linkedin.com%2F%3Foriginal_referer%3Dhttps%253A%252F%252Fwww.google.com%252F"
+										><i class="fab fa-linkedin-in"></i></a
+								></li>
+							</ul>
+						</div>
+					</div>
+					<div
+						class="col-lg-3 col-md-6 wow fadeInUp"
+						data-wow-delay="0.7s"
+					>
+						<div class="team-item rounded overflow-hidden pb-4">
+							<img
+								class="img-fluid mb-4"
+								src="img/team-4.jpg"
+								alt=""
+							/>
+							<h5>Diego Nodal</h5>
+							<span class="text-primary">Marketer Digital</span>
+							<ul class="team-social">
+								<li
+									><a
+										class="btn btn-square"
+										href="https://es-la.facebook.com"
+										><i class="fab fa-facebook-f"></i></a
+								></li>
+								<li
+									><a
+										class="btn btn-square"
+										href="https://twitter.com/?lang=es"
+										><i class="fab fa-twitter"></i></a
+								></li>
+								<li
+									><a
+										class="btn btn-square"
+										href="https://www.instagram.com"
+										><i class="fab fa-instagram"></i></a
+								></li>
+								<li
+									><a
+										class="btn btn-square"
+										href="https://www.linkedin.com/authwall?trk=qf&original_referer=https://mx.linkedin.com/&sessionRedirect=https%3A%2F%2Fmx.linkedin.com%2F%3Foriginal_referer%3Dhttps%253A%252F%252Fwww.google.com%252F"
+										><i class="fab fa-linkedin-in"></i></a
+								></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Team End -->
 
-    <!-- Navbar Start -->
-    <div class="container-fluid bg-white sticky-top">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg bg-white navbar-light p-lg-0">
-                <a href="index.html" class="navbar-brand d-lg-none">
-                    <h1 class="fw-bold m-0">eXcelPC </h1>
-                </a>
-                <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse"
-                        data-bs-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav">
-                        <a href="index.html" class="nav-item nav-link">Inicio</a>
-                        <a href="about.html" class="nav-item nav-link">Acerca de</a>
-                        <a href="blog.html" class="nav-item nav-link">Blog</a>
-                        <a href="project.html" class="nav-item nav-link">Proyectos</a>
-                        <a href="team.html" class="nav-item nav-link active">Equipo</a>
-                        <a href="testimonial.html" class="nav-item nav-link">Testimonios</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Servicios</a>
-                            <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
-                                <a href="service.html" class="dropdown-item">Nuestros servicios</a>
-                                <a href="ensambles.html" class="dropdown-item">Ensambles</a>
-                                <a href="laptops.html" class="dropdown-item">Computadoras y Laptops</a>
-                                <a href="piezas.html" class="dropdown-item">Piezas</a>
-                            </div>
-                        </div>
-                        <a href="contact.html" class="nav-item nav-link">Contacto</a>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </div>
-    <!-- Navbar End -->
+		<!-- Footer Start -->
+		<div
+			class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn"
+			data-wow-delay="0.1s"
+		>
+			<div class="container py-5">
+				<div class="row g-5">
+					<div class="col-lg-3 col-md-6">
+						<h4 class="text-white mb-4">Nuestras oficinas</h4>
+						<p class="mb-2"
+							><i class="fa fa-map-marker-alt me-3"></i
+							>Lindavista, CDMX</p
+						>
+						<p class="mb-2"
+							><i class="fa fa-phone-alt me-3"></i>55 4564 5454</p
+						>
+						<p class="mb-2"
+							><i class="fa fa-envelope me-3"></i
+							>excelpc@gmail.com</p
+						>
+						<div class="d-flex pt-3">
+							<a
+								class="btn btn-square btn-light rounded-circle me-2"
+								href="https://twitter.com/?lang=es"
+								><i class="fab fa-twitter"></i
+							></a>
+							<a
+								class="btn btn-square btn-light rounded-circle me-2"
+								href="https://es-la.facebook.com"
+								><i class="fab fa-facebook-f"></i
+							></a>
+							<a
+								class="btn btn-square btn-light rounded-circle me-2"
+								href="https://www.youtube.com"
+								><i class="fab fa-youtube"></i
+							></a>
+							<a
+								class="btn btn-square btn-light rounded-circle me-2"
+								href="https://www.linkedin.com/authwall?trk=qf&original_referer=https://mx.linkedin.com/&sessionRedirect=https%3A%2F%2Fmx.linkedin.com%2F%3Foriginal_referer%3Dhttps%253A%252F%252Fwww.google.com%252F"
+								><i class="fab fa-linkedin-in"></i
+							></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<h4 class="text-white mb-4">Ir a</h4>
+						<a class="btn btn-link" href="about.html"
+							>Sobre nosotros</a
+						>
+						<a class="btn btn-link" href="contact.html"
+							>¡Contactanos!</a
+						>
+						<a class="btn btn-link" href="service.html"
+							>Nuestros servicios</a
+						>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<h4 class="text-white mb-4">Horarios de trabajo</h4>
+						<p class="mb-1">Lunes - Viernes</p>
+						<h6 class="text-light">09:00 am - 07:00 pm</h6>
+						<p class="mb-1">Sabado</p>
+						<h6 class="text-light">09:00 am - 12:00 pm</h6>
+						<p class="mb-1">Domingo</p>
+						<h6 class="text-light">Cerrado</h6>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<h4 class="text-white mb-4">Noticias y avisos</h4>
+						<p
+							>A sus ordenes, ¡Ya abrimos nuestra sucursal en
+							Naucalpan, Edo. Mex. para sus ensamblajes en su
+							equipo de computo!</p
+						>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Footer End -->
 
+		<!-- Copyright Start -->
+		<div class="container-fluid copyright py-4">
+			<div class="container">
+				<div class="row">
+					<div
+						class="col-md-6 text-center text-md-start mb-3 mb-md-0"
+					>
+						&copy;
+						<a class="fw-medium text-light" href="#">eXcelPC</a>,
+						All Right Reserved.
+					</div>
+					<div class="col-md-6 text-center text-md-end">
+						<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+						Designed By
+						<a
+							class="fw-medium text-light"
+							href="https://htmlcodex.com"
+							>HTML Codex</a
+						>
+						Distributed By
+						<a
+							class="fw-medium text-light"
+							href="https://themewagon.com"
+							>ThemeWagon</a
+						>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Copyright End -->
 
-    <!-- Page Header Start -->
-    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container text-center py-5">
-            <h1 class="display-2 text-white mb-4 animated slideInDown">Nuestro equipo</h1>
-            <nav aria-label="breadcrumb animated slideInDown">
-                <ol class="breadcrumb justify-content-center mb-0">
-                    <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
-                    <li class="breadcrumb-item"><a href="about.html">Acerca de</a></li>
-                    <li class="breadcrumb-item"><a href="blog.html">Blog</a></li>
-                    <li class="breadcrumb-item"><a href="project.html">Proyectos</a></li>
-                    <li class="breadcrumb-item text-primary" aria-current="page">Equipo</li>
-                    <li class="breadcrumb-item"><a href="testimonial.html">Testimonios</a></li>
-                    <li class="breadcrumb-item"><a href="contact.html">Contacto</a></li>
-                </ol>
-            </nav>
-        </div>
-    </div>
-    <!-- Page Header End -->
+		<!-- Back to Top -->
+		<a
+			href="#"
+			class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"
+			><i class="bi bi-arrow-up"></i
+		></a>
 
+		<!-- JavaScript Libraries -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="lib/wow/wow.min.js"></script>
+		<script src="lib/easing/easing.min.js"></script>
+		<script src="lib/waypoints/waypoints.min.js"></script>
+		<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+		<script src="lib/lightbox/js/lightbox.min.js"></script>
 
-    <!-- Team Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <p class="fs-5 fw-medium text-primary">Nuestro equipo</p>
-                <h1 class="display-5 mb-5">Contamos con un grupo de expertos dentro de eXcelPC listos para brindarte un excelente servicio</h1>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item rounded overflow-hidden pb-4">
-                        <img class="img-fluid mb-4" src="img/team-1.jpg" alt="">
-                        <h5>Alex Rodriguez</h5>
-                        <span class="text-primary">Fundador & CEO</span>
-                        <ul class="team-social">
-                            <li><a class="btn btn-square" href="https://es-la.facebook.com"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a class="btn btn-square" href="https://twitter.com/?lang=es"><i class="fab fa-twitter"></i></a></li>
-                            <li><a class="btn btn-square" href="https://www.instagram.com"><i class="fab fa-instagram"></i></a></li>
-                            <li><a class="btn btn-square" href="https://www.linkedin.com/authwall?trk=qf&original_referer=https://mx.linkedin.com/&sessionRedirect=https%3A%2F%2Fmx.linkedin.com%2F%3Foriginal_referer%3Dhttps%253A%252F%252Fwww.google.com%252F"><i class="fab fa-linkedin-in"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item rounded overflow-hidden pb-4">
-                        <img class="img-fluid mb-4" src="img/team-2.jpg" alt="">
-                        <h5>Roberto Gallegos</h5>
-                        <span class="text-primary">Co Fundador</span>
-                        <ul class="team-social">
-                            <li><a class="btn btn-square" href="https://es-la.facebook.com"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a class="btn btn-square" href="https://twitter.com/?lang=es"><i class="fab fa-twitter"></i></a></li>
-                            <li><a class="btn btn-square" href="https://www.instagram.com"><i class="fab fa-instagram"></i></a></li>
-                            <li><a class="btn btn-square" href="https://www.linkedin.com/authwall?trk=qf&original_referer=https://mx.linkedin.com/&sessionRedirect=https%3A%2F%2Fmx.linkedin.com%2F%3Foriginal_referer%3Dhttps%253A%252F%252Fwww.google.com%252F"><i class="fab fa-linkedin-in"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item rounded overflow-hidden pb-4">
-                        <img class="img-fluid mb-4" src="img/team-3.jpg" alt="">
-                        <h5>Mario Castillo</h5>
-                        <span class="text-primary">Manager Ejecutivo</span>
-                        <ul class="team-social">
-                            <li><a class="btn btn-square" href="https://es-la.facebook.com"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a class="btn btn-square" href="https://twitter.com/?lang=es"><i class="fab fa-twitter"></i></a></li>
-                            <li><a class="btn btn-square" href="https://www.instagram.com"><i class="fab fa-instagram"></i></a></li>
-                            <li><a class="btn btn-square" href="https://www.linkedin.com/authwall?trk=qf&original_referer=https://mx.linkedin.com/&sessionRedirect=https%3A%2F%2Fmx.linkedin.com%2F%3Foriginal_referer%3Dhttps%253A%252F%252Fwww.google.com%252F"><i class="fab fa-linkedin-in"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-item rounded overflow-hidden pb-4">
-                        <img class="img-fluid mb-4" src="img/team-4.jpg" alt="">
-                        <h5>Diego Nodal</h5>
-                        <span class="text-primary">Marketer Digital</span>
-                        <ul class="team-social">
-                            <li><a class="btn btn-square" href="https://es-la.facebook.com"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a class="btn btn-square" href="https://twitter.com/?lang=es"><i class="fab fa-twitter"></i></a></li>
-                            <li><a class="btn btn-square" href="https://www.instagram.com"><i class="fab fa-instagram"></i></a></li>
-                            <li><a class="btn btn-square" href="https://www.linkedin.com/authwall?trk=qf&original_referer=https://mx.linkedin.com/&sessionRedirect=https%3A%2F%2Fmx.linkedin.com%2F%3Foriginal_referer%3Dhttps%253A%252F%252Fwww.google.com%252F"><i class="fab fa-linkedin-in"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Team End -->
-
-
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Nuestras oficinas</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Lindavista, CDMX</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>55 4564 5454</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>excelpc@gmail.com</p>
-                    <div class="d-flex pt-3">
-                        <a class="btn btn-square btn-light rounded-circle me-2" href="https://twitter.com/?lang=es"><i
-                                class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-light rounded-circle me-2" href="https://es-la.facebook.com"><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-light rounded-circle me-2" href="https://www.youtube.com"><i
-                                class="fab fa-youtube"></i></a>
-                        <a class="btn btn-square btn-light rounded-circle me-2" href="https://www.linkedin.com/authwall?trk=qf&original_referer=https://mx.linkedin.com/&sessionRedirect=https%3A%2F%2Fmx.linkedin.com%2F%3Foriginal_referer%3Dhttps%253A%252F%252Fwww.google.com%252F"><i
-                                class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Ir a</h4>
-                    <a class="btn btn-link" href="about.html">Sobre nosotros</a>
-                    <a class="btn btn-link" href="contact.html">¡Contactanos!</a>
-                    <a class="btn btn-link" href="service.html">Nuestros servicios</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Horarios de trabajo</h4>
-                    <p class="mb-1">Lunes - Viernes</p>
-                    <h6 class="text-light">09:00 am - 07:00 pm</h6>
-                    <p class="mb-1">Sabado</p>
-                    <h6 class="text-light">09:00 am - 12:00 pm</h6>
-                    <p class="mb-1">Domingo</p>
-                    <h6 class="text-light">Cerrado</h6>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Noticias y avisos</h4>
-                    <p>A sus ordenes, ¡Ya abrimos nuestra sucursal en Naucalpan, Edo. Mex. para sus ensamblajes en su equipo de computo!</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Footer End -->
-
-
-    <!-- Copyright Start -->
-    <div class="container-fluid copyright py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a class="fw-medium text-light" href="#">eXcelPC</a>, All Right Reserved.
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                    Designed By <a class="fw-medium text-light" href="https://htmlcodex.com">HTML Codex</a>
-                    Distributed By <a class="fw-medium text-light" href="https://themewagon.com">ThemeWagon</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Copyright End -->
-
-
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
-            class="bi bi-arrow-up"></i></a>
-
-
-    <!-- JavaScript Libraries -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-</body>
-
+		<!-- Template Javascript -->
+		<script src="js/main.js"></script>
+	</body>
 </html>

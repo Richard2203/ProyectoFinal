@@ -1,210 +1,375 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>eXcelPC</title>
+		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+		<meta content="" name="keywords" />
+		<meta content="" name="description" />
 
-<head>
-    <meta charset="utf-8">
-    <title>eXcelPC</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+		<!-- Favicon -->
+		<link href="img/favicon.ico" rel="icon" />
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+		<!-- Google Web Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@500;700&display=swap"
+			rel="stylesheet"
+		/>
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@500;700&display=swap"
-        rel="stylesheet">
+		<!-- Icon Font Stylesheet -->
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+			rel="stylesheet"
+		/>
 
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+		<!-- Libraries Stylesheet -->
+		<link href="lib/animate/animate.min.css" rel="stylesheet" />
+		<link
+			href="lib/owlcarousel/assets/owl.carousel.min.css"
+			rel="stylesheet"
+		/>
+		<link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+		<!-- Customized Bootstrap Stylesheet -->
+		<link href="css/bootstrap.min.css" rel="stylesheet" />
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+		<!-- Template Stylesheet -->
+		<link href="css/style.css" rel="stylesheet" />
+	</head>
 
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-</head>
+	<body>
+		<!-- Spinner Start -->
+		<div
+			id="spinner"
+			class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+		>
+			<div
+				class="spinner-border text-primary"
+				role="status"
+				style="width: 3rem; height: 3rem"
+			></div>
+		</div>
+		<!-- Spinner End -->
 
-<body>
-    <!-- Spinner Start -->
-    <div id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
-    </div>
-    <!-- Spinner End -->
+		<!-- Topbar Start -->
+		<div class="container-fluid bg-primary text-white d-none d-lg-flex">
+			<div class="container py-3">
+				<div class="d-flex align-items-center">
+					<a href="index.html">
+						<h2 class="text-white fw-bold m-0">eXcelPC</h2>
+					</a>
+					<div class="ms-auto d-flex align-items-center">
+						<small class="ms-4"
+							><i class="fa fa-map-marker-alt me-3"></i
+							>Lindavista, CDMX</small
+						>
+						<small class="ms-4"
+							><i class="fa fa-envelope me-3"></i
+							>excelpc@gmail.com</small
+						>
+						<small class="ms-4"
+							><i class="fa fa-phone-alt me-3"></i>55 4564
+							5454</small
+						>
+						<div class="ms-3 d-flex">
+							<a
+								class="btn btn-sm-square btn-light text-primary rounded-circle ms-2"
+								href="https://es-la.facebook.com"
+								><i class="fab fa-facebook-f"></i
+							></a>
+							<a
+								class="btn btn-sm-square btn-light text-primary rounded-circle ms-2"
+								href="https://twitter.com/?lang=es"
+								><i class="fab fa-twitter"></i
+							></a>
+							<a
+								class="btn btn-sm-square btn-light text-primary rounded-circle ms-2"
+								href="https://www.linkedin.com/authwall?trk=qf&original_referer=https://mx.linkedin.com/&sessionRedirect=https%3A%2F%2Fmx.linkedin.com%2F%3Foriginal_referer%3Dhttps%253A%252F%252Fwww.google.com%252F"
+								><i class="fab fa-linkedin-in"></i
+							></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Topbar End -->
 
+		<!-- Navbar Start -->
+		<div class="container-fluid bg-white sticky-top">
+			<div class="container">
+				<nav
+					class="navbar navbar-expand-lg bg-white navbar-light p-lg-0"
+				>
+					<a href="index.html" class="navbar-brand d-lg-none">
+						<h1 class="fw-bold m-0">eXcelPC </h1>
+					</a>
+					<button
+						type="button"
+						class="navbar-toggler me-0"
+						data-bs-toggle="collapse"
+						data-bs-target="#navbarCollapse"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarCollapse">
+						<div class="navbar-nav">
+							<a
+								href="index.html"
+								class="nav-item nav-link active"
+								>Inicio</a
+							>
+							<a href="about.html" class="nav-item nav-link"
+								>Acerca de</a
+							>
+							<a href="blog.html" class="nav-item nav-link"
+								>Blog</a
+							>
+							<a href="project.html" class="nav-item nav-link"
+								>Proyectos</a
+							>
+							<a href="team.html" class="nav-item nav-link"
+								>Equipo</a
+							>
+							<a href="testimonial.html" class="nav-item nav-link"
+								>Testimonios</a
+							>
+							<div class="nav-item dropdown">
+								<a
+									href="#"
+									class="nav-link dropdown-toggle"
+									data-bs-toggle="dropdown"
+									>Servicios</a
+								>
+								<div
+									class="dropdown-menu bg-light rounded-0 rounded-bottom m-0"
+								>
+									<a href="service.html" class="dropdown-item"
+										>Nuestros servicios</a
+									>
+									<a
+										href="ensambles.html"
+										class="dropdown-item"
+										>Ensambles</a
+									>
+									<a href="laptops.html" class="dropdown-item"
+										>Computadoras y Laptops</a
+									>
+									<a href="piezas.html" class="dropdown-item"
+										>Piezas</a
+									>
+								</div>
+							</div>
+							<a href="contact.html" class="nav-item nav-link"
+								>Contacto</a
+							>
+							<a href="crud_admi.html" class="nav-item nav-link">
+								administrador
+							</a>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<!-- Navbar End -->
 
-    <!-- Topbar Start -->
-    <div class="container-fluid bg-primary text-white d-none d-lg-flex">
-        <div class="container py-3">
-            <div class="d-flex align-items-center">
-                <a href="index.html">
-                    <h2 class="text-white fw-bold m-0">eXcelPC</h2>
-                </a>
-                <div class="ms-auto d-flex align-items-center">
-                    <small class="ms-4"><i class="fa fa-map-marker-alt me-3"></i>Lindavista, CDMX</small>
-                    <small class="ms-4"><i class="fa fa-envelope me-3"></i>excelpc@gmail.com</small>
-                    <small class="ms-4"><i class="fa fa-phone-alt me-3"></i>55 4564 5454</small>
-                    <div class="ms-3 d-flex">
-                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-2" href="https://es-la.facebook.com"><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-2" href="https://twitter.com/?lang=es"><i
-                                class="fab fa-twitter"></i></a>
-                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-2" href="https://www.linkedin.com/authwall?trk=qf&original_referer=https://mx.linkedin.com/&sessionRedirect=https%3A%2F%2Fmx.linkedin.com%2F%3Foriginal_referer%3Dhttps%253A%252F%252Fwww.google.com%252F"><i
-                                class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Topbar End -->
+		<!-- Carousel Start -->
+		<div class="container-fluid px-0 mb-5">
+			<div
+				id="header-carousel"
+				class="carousel slide carousel-fade"
+				data-bs-ride="carousel"
+			>
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img
+							class="w-100"
+							src="img/excel_logo1.png"
+							alt="Image"
+						/>
+						<div class="carousel-caption">
+							<div class="container">
+								<div class="row justify-content-start">
+									<div class="col-lg-7 text-start">
+										<p
+											class="fs-4 text-white animated slideInRight"
+											>Bienvenido a
+											<strong>eXcelPC</strong>
+										</p>
+										<h1
+											class="display-1 text-white mb-4 animated slideInRight"
+											>Ensambla tu computadora con
+											nosotros</h1
+										>
+										<a
+											href=""
+											class="btn btn-primary rounded-pill py-3 px-5 animated slideInRight"
+											>Ver más</a
+										>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img class="w-100" src="img/nvidia.jpg" alt="Image" />
+						<div class="carousel-caption">
+							<div class="container">
+								<div class="row justify-content-end">
+									<div class="col-lg-7 text-end">
+										<p
+											class="fs-4 text-white animated slideInLeft"
+											>¿Quieres las nuevas graficas de
+											<strong>NVIDIA?</strong>
+										</p>
+										<h1
+											class="display-1 text-white mb-5 animated slideInLeft"
+											>¡Compralas con nosotros!</h1
+										>
+										<a
+											href="piezas.html"
+											class="btn btn-primary rounded-pill py-3 px-5 animated slideInLeft"
+											>Ver más</a
+										>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<button
+					class="carousel-control-prev"
+					type="button"
+					data-bs-target="#header-carousel"
+					data-bs-slide="prev"
+				>
+					<span
+						class="carousel-control-prev-icon"
+						aria-hidden="true"
+					></span>
+					<span class="visually-hidden">Previo</span>
+				</button>
+				<button
+					class="carousel-control-next"
+					type="button"
+					data-bs-target="#header-carousel"
+					data-bs-slide="next"
+				>
+					<span
+						class="carousel-control-next-icon"
+						aria-hidden="true"
+					></span>
+					<span class="visually-hidden">Siguiente</span>
+				</button>
+			</div>
+		</div>
+		<!-- Carousel End -->
 
+		<!-- Features Start -->
+		<div class="container-xxl py-5">
+			<div class="container">
+				<div class="row g-0 feature-row">
+					<div
+						class="col-md-6 col-lg-3 wow fadeIn"
+						data-wow-delay="0.1s"
+					>
+						<div class="feature-item border h-100 p-5">
+							<div
+								class="btn-square bg-light rounded-circle mb-4"
+								style="width: 64px; height: 64px"
+							>
+								<img
+									class="img-fluid"
+									src="img/icon/icon-1.png"
+									alt="Icon"
+								/>
+							</div>
+							<h5 class="mb-3">Productos de Calidad</h5>
+							<p class="mb-0"
+								>Nuestros productos cuentan con garantías que
+								respaldan su calidad</p
+							>
+						</div>
+					</div>
+					<div
+						class="col-md-6 col-lg-3 wow fadeIn"
+						data-wow-delay="0.3s"
+					>
+						<div class="feature-item border h-100 p-5">
+							<div
+								class="btn-square bg-light rounded-circle mb-4"
+								style="width: 64px; height: 64px"
+							>
+								<img
+									class="img-fluid"
+									src="img/icon/icon-2.png"
+									alt="Icon"
+								/>
+							</div>
+							<h5 class="mb-3"
+								>Ingenieros y Técnicos de Primera</h5
+							>
+							<p class="mb-0"
+								>Nuestros trabajadores son profesionales. No te
+								preocupes por nada c:</p
+							>
+						</div>
+					</div>
+					<div
+						class="col-md-6 col-lg-3 wow fadeIn"
+						data-wow-delay="0.5s"
+					>
+						<div class="feature-item border h-100 p-5">
+							<div
+								class="btn-square bg-light rounded-circle mb-4"
+								style="width: 64px; height: 64px"
+							>
+								<img
+									class="img-fluid"
+									src="img/icon/icon-3.png"
+									alt="Icon"
+								/>
+							</div>
+							<h5 class="mb-3">Precios Justos</h5>
+							<p class="mb-0"
+								>¡De los precios más bajos del mercado!</p
+							>
+						</div>
+					</div>
+					<div
+						class="col-md-6 col-lg-3 wow fadeIn"
+						data-wow-delay="0.7s"
+					>
+						<div class="feature-item border h-100 p-5">
+							<div
+								class="btn-square bg-light rounded-circle mb-4"
+								style="width: 64px; height: 64px"
+							>
+								<img
+									class="img-fluid"
+									src="img/icon/icon-4.png"
+									alt="Icon"
+								/>
+							</div>
+							<h5 class="mb-3">Soporte 24/7</h5>
+							<p class="mb-0"
+								>Puedes contactarnos cuando sea y trataremos de
+								responderte lo más pronto posible.</p
+							>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Features End -->
 
-    <!-- Navbar Start -->
-    <div class="container-fluid bg-white sticky-top">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg bg-white navbar-light p-lg-0">
-                <a href="index.html" class="navbar-brand d-lg-none">
-                    <h1 class="fw-bold m-0">eXcelPC </h1>
-                </a>
-                <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse"
-                    data-bs-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav">
-                        <a href="index.html" class="nav-item nav-link active">Inicio</a>
-                        <a href="about.html" class="nav-item nav-link">Acerca de</a>
-                        <a href="blog.html" class="nav-item nav-link">Blog</a>
-                        <a href="project.html" class="nav-item nav-link">Proyectos</a>
-                        <a href="team.html" class="nav-item nav-link">Equipo</a>
-                        <a href="testimonial.html" class="nav-item nav-link">Testimonios</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Servicios</a>
-                            <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
-                                <a href="service.html" class="dropdown-item">Nuestros servicios</a>
-                                <a href="ensambles.html" class="dropdown-item">Ensambles</a>
-                                <a href="laptops.html" class="dropdown-item">Computadoras y Laptops</a>
-                                <a href="piezas.html" class="dropdown-item">Piezas</a>
-                            </div>
-                        </div>
-                        <a href="contact.html" class="nav-item nav-link">Contacto</a>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </div>
-    <!-- Navbar End -->
-
-
-    <!-- Carousel Start -->
-    <div class="container-fluid px-0 mb-5">
-        <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="w-100" src="img/excel_logo1.png" alt="Image">
-                    <div class="carousel-caption">
-                        <div class="container">
-                            <div class="row justify-content-start">
-                                <div class="col-lg-7 text-start">
-                                    <p class="fs-4 text-white animated slideInRight">Bienvenido a
-                                        <strong>eXcelPC</strong>
-                                    </p>
-                                    <h1 class="display-1 text-white mb-4 animated slideInRight">Ensambla tu computadora con nosotros</h1>
-                                    <a href=""
-                                        class="btn btn-primary rounded-pill py-3 px-5 animated slideInRight">Ver más</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="w-100" src="img/nvidia.jpg" alt="Image">
-                    <div class="carousel-caption">
-                        <div class="container">
-                            <div class="row justify-content-end">
-                                <div class="col-lg-7 text-end">
-                                    <p class="fs-4 text-white animated slideInLeft">¿Quieres las nuevas graficas de <strong>NVIDIA?</strong>
-                                    </p>
-                                    <h1 class="display-1 text-white mb-5 animated slideInLeft">¡Compralas con nosotros!</h1>
-                                    <a href="piezas.html"
-                                        class="btn btn-primary rounded-pill py-3 px-5 animated slideInLeft">Ver más</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previo</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Siguiente</span>
-            </button>
-        </div>
-    </div>
-    <!-- Carousel End -->
-
-
-    <!-- Features Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-0 feature-row">
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="feature-item border h-100 p-5">
-                        <div class="btn-square bg-light rounded-circle mb-4" style="width: 64px; height: 64px;">
-                            <img class="img-fluid" src="img/icon/icon-1.png" alt="Icon">
-                        </div>
-                        <h5 class="mb-3">Productos de Calidad</h5>
-                        <p class="mb-0">Nuestros productos cuentan con garantías que respaldan su calidad</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
-                    <div class="feature-item border h-100 p-5">
-                        <div class="btn-square bg-light rounded-circle mb-4" style="width: 64px; height: 64px;">
-                            <img class="img-fluid" src="img/icon/icon-2.png" alt="Icon">
-                        </div>
-                        <h5 class="mb-3">Ingenieros y Técnicos de Primera</h5>
-                        <p class="mb-0">Nuestros trabajadores son profesionales. No te preocupes por nada c:</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="feature-item border h-100 p-5">
-                        <div class="btn-square bg-light rounded-circle mb-4" style="width: 64px; height: 64px;">
-                            <img class="img-fluid" src="img/icon/icon-3.png" alt="Icon">
-                        </div>
-                        <h5 class="mb-3">Precios Justos</h5>
-                        <p class="mb-0">¡De los precios más bajos del mercado!</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
-                    <div class="feature-item border h-100 p-5">
-                        <div class="btn-square bg-light rounded-circle mb-4" style="width: 64px; height: 64px;">
-                            <img class="img-fluid" src="img/icon/icon-4.png" alt="Icon">
-                        </div>
-                        <h5 class="mb-3">Soporte 24/7</h5>
-                        <p class="mb-0">Puedes contactarnos cuando sea y trataremos de responderte lo más pronto posible.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Features End -->
-
-
-    <!-- About Start -->
-    <!-- <div class="container-xxl about my-5">
+		<!-- About Start -->
+		<!-- <div class="container-xxl about my-5">
         <div class="container">
             <div class="row g-0">
                 <div class="col-lg-6">
@@ -241,9 +406,8 @@
     </div>
     <!-- About End -->
 
-
-    <!-- Video Modal Start -->
-    <!-- <div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+		<!-- Video Modal Start -->
+		<!-- <div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content rounded-0">
@@ -253,7 +417,7 @@
                 </div>
                 <div class="modal-body">
                     <!-- 16:9 aspect ratio -->
-                    <!-- <div class="ratio ratio-16x9">
+		<!-- <div class="ratio ratio-16x9">
                         <iframe class="embed-responsive-item" src="" id="video" allowfullscreen
                             allowscriptaccess="always" allow="autoplay"></iframe>
                     </div>
@@ -261,11 +425,10 @@
             </div>
         </div>
     </div>  -->
-    <!-- Video Modal End -->
+		<!-- Video Modal End -->
 
-
-    <!-- Service Start -->
-    <!-- <div class="container-xxl py-5">
+		<!-- Service Start -->
+		<!-- <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
                 <p class="fs-5 fw-medium text-primary">Our Services</p>
@@ -377,273 +540,535 @@
             </div>
         </div>
     </div> -->
-    <!-- Service End -->
+		<!-- Service End -->
 
- -->
+		-->
 
-    <!-- Project Start -->
-    <div class="container-xxl pt-5">
-        <div class="container">
-            <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s"
-                style="max-width: 500px;">
-                <p class="fs-5 fw-medium text-primary">Nuestros Productos</p>
-                <h1 class="display-5 mb-5">Tenemos muchos productos que pueden interesarte</h1>
-            </div>
-            <div class="owl-carousel project-carousel wow fadeInUp" data-wow-delay="0.1s">
-                <div class="project-item mb-5">
-                    <div class="position-relative">
-                        <img class="img-fluid" src="img/ensamble1.jpg" alt="">
-                        <div class="project-overlay">
-                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="img/ensamble1.jpg"
-                                data-lightbox="project"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href=""><i
-                                    class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <a class="d-block h5" href="">Computadora Warrior Gaming</a>
-                        <span>Computadora PRIDE GAMING FERRET PRO / AMD Ryzen 5 5500 / NVIDIA® GeForce RTX™ 3060 / 32GB RAM / 1TB SSD / DISIPADOR POR AIRE RGB / 550W 80+ BRONZE</span>
-                    </div>
-                </div>
-                <div class="project-item mb-5">
-                    <div class="position-relative">
-                        <img class="img-fluid" src="img/ensamble2.jpg" alt="">
-                        <div class="project-overlay">
-                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="img/ensamble2.jpg"
-                                data-lightbox="project"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href=""><i
-                                    class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <a class="d-block h5" href="">Computadora Eagle Warrior</a>
-                        <span>Computadora PRIDE WHITE HORSE / Radeon RX 6650XT / AMD Ryzen 5 5600X / 32GB (2X16) RAM / 1TB SSD M.2 / 650W 80+ Gold / Disipador por Aire</span>
-                    </div>
-                </div>
-                <div class="project-item mb-5">
-                    <div class="position-relative">
-                        <img class="img-fluid" src="img/ensamble3.png" alt="">
-                        <div class="project-overlay">
-                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="img/ensamble3.png"
-                                data-lightbox="project"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href=""><i
-                                    class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <a class="d-block h5" href="">Gabinete Complete Gaming</a>
-                        <span>Gabinete Lian Li Lancool III / RGB / Cristal Templado / 4 Ventiladores de 140PWM / 3R-X BLACK</span>
-                    </div>
-                </div>
-                <div class="project-item mb-5">
-                    <div class="position-relative">
-                        <img class="img-fluid" src="img/laptop1.png" alt="">
-                        <div class="project-overlay">
-                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="img/laptop1.png"
-                                data-lightbox="project"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href=""><i
-                                    class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <a class="d-block h5" href="">Laptop White Oasis</a>
-                        <span>Laptop Gamer Gigabyte AERO 17 KE5 17.3" 4K Ultra HD / Intel Core i7-12700H 3.50GHz / 16GB / 1TB SSD / NVIDIA GeForce RTX 3060 / Windows 11 Pro 64-bit / Español / Plata</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Project End -->
+		<!-- Project Start -->
+		<div class="container-xxl pt-5">
+			<div class="container">
+				<div
+					class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp"
+					data-wow-delay="0.1s"
+					style="max-width: 500px"
+				>
+					<p class="fs-5 fw-medium text-primary"
+						>Nuestros Productos</p
+					>
+					<h1 class="display-5 mb-5"
+						>Tenemos muchos productos que pueden interesarte</h1
+					>
+				</div>
+				<div
+					class="owl-carousel project-carousel wow fadeInUp"
+					data-wow-delay="0.1s"
+				>
+					<div class="project-item mb-5">
+						<div class="position-relative">
+							<img
+								class="img-fluid"
+								src="img/ensamble1.jpg"
+								alt=""
+							/>
+							<div class="project-overlay">
+								<a
+									class="btn btn-lg-square btn-light rounded-circle m-1"
+									href="img/ensamble1.jpg"
+									data-lightbox="project"
+									><i class="fa fa-eye"></i
+								></a>
+								<a
+									class="btn btn-lg-square btn-light rounded-circle m-1"
+									href=""
+									><i class="fa fa-link"></i
+								></a>
+							</div>
+						</div>
+						<div class="p-4">
+							<a class="d-block h5" href=""
+								>Computadora Warrior Gaming</a
+							>
+							<span
+								>Computadora PRIDE GAMING FERRET PRO / AMD Ryzen
+								5 5500 / NVIDIA® GeForce RTX™ 3060 / 32GB RAM /
+								1TB SSD / DISIPADOR POR AIRE RGB / 550W 80+
+								BRONZE</span
+							>
+						</div>
+					</div>
+					<div class="project-item mb-5">
+						<div class="position-relative">
+							<img
+								class="img-fluid"
+								src="img/ensamble2.jpg"
+								alt=""
+							/>
+							<div class="project-overlay">
+								<a
+									class="btn btn-lg-square btn-light rounded-circle m-1"
+									href="img/ensamble2.jpg"
+									data-lightbox="project"
+									><i class="fa fa-eye"></i
+								></a>
+								<a
+									class="btn btn-lg-square btn-light rounded-circle m-1"
+									href=""
+									><i class="fa fa-link"></i
+								></a>
+							</div>
+						</div>
+						<div class="p-4">
+							<a class="d-block h5" href=""
+								>Computadora Eagle Warrior</a
+							>
+							<span
+								>Computadora PRIDE WHITE HORSE / Radeon RX
+								6650XT / AMD Ryzen 5 5600X / 32GB (2X16) RAM /
+								1TB SSD M.2 / 650W 80+ Gold / Disipador por
+								Aire</span
+							>
+						</div>
+					</div>
+					<div class="project-item mb-5">
+						<div class="position-relative">
+							<img
+								class="img-fluid"
+								src="img/ensamble3.png"
+								alt=""
+							/>
+							<div class="project-overlay">
+								<a
+									class="btn btn-lg-square btn-light rounded-circle m-1"
+									href="img/ensamble3.png"
+									data-lightbox="project"
+									><i class="fa fa-eye"></i
+								></a>
+								<a
+									class="btn btn-lg-square btn-light rounded-circle m-1"
+									href=""
+									><i class="fa fa-link"></i
+								></a>
+							</div>
+						</div>
+						<div class="p-4">
+							<a class="d-block h5" href=""
+								>Gabinete Complete Gaming</a
+							>
+							<span
+								>Gabinete Lian Li Lancool III / RGB / Cristal
+								Templado / 4 Ventiladores de 140PWM / 3R-X
+								BLACK</span
+							>
+						</div>
+					</div>
+					<div class="project-item mb-5">
+						<div class="position-relative">
+							<img
+								class="img-fluid"
+								src="img/laptop1.png"
+								alt=""
+							/>
+							<div class="project-overlay">
+								<a
+									class="btn btn-lg-square btn-light rounded-circle m-1"
+									href="img/laptop1.png"
+									data-lightbox="project"
+									><i class="fa fa-eye"></i
+								></a>
+								<a
+									class="btn btn-lg-square btn-light rounded-circle m-1"
+									href=""
+									><i class="fa fa-link"></i
+								></a>
+							</div>
+						</div>
+						<div class="p-4">
+							<a class="d-block h5" href="">Laptop White Oasis</a>
+							<span
+								>Laptop Gamer Gigabyte AERO 17 KE5 17.3" 4K
+								Ultra HD / Intel Core i7-12700H 3.50GHz / 16GB /
+								1TB SSD / NVIDIA GeForce RTX 3060 / Windows 11
+								Pro 64-bit / Español / Plata</span
+							>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Project End -->
 
+		<!-- Team Start -->
+		<div class="container-xxl py-5">
+			<div class="container">
+				<div
+					class="text-center mx-auto wow fadeInUp"
+					data-wow-delay="0.1s"
+					style="max-width: 500px"
+				>
+					<p class="fs-5 fw-medium text-primary">Nuestro equipo</p>
+					<h1 class="display-5 mb-5"
+						>Contamos con un grupo de expertos dentro de eXcelPC
+						listos para brindarte un excelente servicio</h1
+					>
+				</div>
+				<div class="row g-4">
+					<div
+						class="col-lg-3 col-md-6 wow fadeInUp"
+						data-wow-delay="0.1s"
+					>
+						<div class="team-item rounded overflow-hidden pb-4">
+							<img
+								class="img-fluid mb-4"
+								src="img/team-1.jpg"
+								alt=""
+							/>
+							<h5>Alex Rodriguez</h5>
+							<span class="text-primary">Fundador & CEO</span>
+							<ul class="team-social">
+								<li
+									><a
+										class="btn btn-square"
+										href="https://es-la.facebook.com"
+										><i class="fab fa-facebook-f"></i></a
+								></li>
+								<li
+									><a
+										class="btn btn-square"
+										href="https://twitter.com/?lang=es"
+										><i class="fab fa-twitter"></i></a
+								></li>
+								<li
+									><a
+										class="btn btn-square"
+										href="https://www.instagram.com"
+										><i class="fab fa-instagram"></i></a
+								></li>
+								<li
+									><a
+										class="btn btn-square"
+										href="https://www.linkedin.com/authwall?trk=qf&original_referer=https://mx.linkedin.com/&sessionRedirect=https%3A%2F%2Fmx.linkedin.com%2F%3Foriginal_referer%3Dhttps%253A%252F%252Fwww.google.com%252F"
+										><i class="fab fa-linkedin-in"></i></a
+								></li>
+							</ul>
+						</div>
+					</div>
+					<div
+						class="col-lg-3 col-md-6 wow fadeInUp"
+						data-wow-delay="0.3s"
+					>
+						<div class="team-item rounded overflow-hidden pb-4">
+							<img
+								class="img-fluid mb-4"
+								src="img/team-2.jpg"
+								alt=""
+							/>
+							<h5>Roberto Gallegos</h5>
+							<span class="text-primary">Co Fundador</span>
+							<ul class="team-social">
+								<li
+									><a
+										class="btn btn-square"
+										href="https://es-la.facebook.com"
+										><i class="fab fa-facebook-f"></i></a
+								></li>
+								<li
+									><a
+										class="btn btn-square"
+										href="https://twitter.com/?lang=es"
+										><i class="fab fa-twitter"></i></a
+								></li>
+								<li
+									><a
+										class="btn btn-square"
+										href="https://www.instagram.com"
+										><i class="fab fa-instagram"></i></a
+								></li>
+								<li
+									><a
+										class="btn btn-square"
+										href="https://www.linkedin.com/authwall?trk=qf&original_referer=https://mx.linkedin.com/&sessionRedirect=https%3A%2F%2Fmx.linkedin.com%2F%3Foriginal_referer%3Dhttps%253A%252F%252Fwww.google.com%252F"
+										><i class="fab fa-linkedin-in"></i></a
+								></li>
+							</ul>
+						</div>
+					</div>
+					<div
+						class="col-lg-3 col-md-6 wow fadeInUp"
+						data-wow-delay="0.5s"
+					>
+						<div class="team-item rounded overflow-hidden pb-4">
+							<img
+								class="img-fluid mb-4"
+								src="img/team-3.jpg"
+								alt=""
+							/>
+							<h5>Mario Castillo</h5>
+							<span class="text-primary">Manager Ejecutivo</span>
+							<ul class="team-social">
+								<li
+									><a
+										class="btn btn-square"
+										href="https://es-la.facebook.com"
+										><i class="fab fa-facebook-f"></i></a
+								></li>
+								<li
+									><a
+										class="btn btn-square"
+										href="https://twitter.com/?lang=es"
+										><i class="fab fa-twitter"></i></a
+								></li>
+								<li
+									><a
+										class="btn btn-square"
+										href="https://www.instagram.com"
+										><i class="fab fa-instagram"></i></a
+								></li>
+								<li
+									><a
+										class="btn btn-square"
+										href="https://www.linkedin.com/authwall?trk=qf&original_referer=https://mx.linkedin.com/&sessionRedirect=https%3A%2F%2Fmx.linkedin.com%2F%3Foriginal_referer%3Dhttps%253A%252F%252Fwww.google.com%252F"
+										><i class="fab fa-linkedin-in"></i></a
+								></li>
+							</ul>
+						</div>
+					</div>
+					<div
+						class="col-lg-3 col-md-6 wow fadeInUp"
+						data-wow-delay="0.7s"
+					>
+						<div class="team-item rounded overflow-hidden pb-4">
+							<img
+								class="img-fluid mb-4"
+								src="img/team-4.jpg"
+								alt=""
+							/>
+							<h5>Diego Nodal</h5>
+							<span class="text-primary">Marketer Digital</span>
+							<ul class="team-social">
+								<li
+									><a
+										class="btn btn-square"
+										href="https://es-la.facebook.com"
+										><i class="fab fa-facebook-f"></i></a
+								></li>
+								<li
+									><a
+										class="btn btn-square"
+										href="https://twitter.com/?lang=es"
+										><i class="fab fa-twitter"></i></a
+								></li>
+								<li
+									><a
+										class="btn btn-square"
+										href="https://www.instagram.com"
+										><i class="fab fa-instagram"></i></a
+								></li>
+								<li
+									><a
+										class="btn btn-square"
+										href="https://www.linkedin.com/authwall?trk=qf&original_referer=https://mx.linkedin.com/&sessionRedirect=https%3A%2F%2Fmx.linkedin.com%2F%3Foriginal_referer%3Dhttps%253A%252F%252Fwww.google.com%252F"
+										><i class="fab fa-linkedin-in"></i></a
+								></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Team End -->
 
-    <!-- Team Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <p class="fs-5 fw-medium text-primary">Nuestro equipo</p>
-                <h1 class="display-5 mb-5">Contamos con un grupo de expertos dentro de eXcelPC listos para brindarte un excelente servicio</h1>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item rounded overflow-hidden pb-4">
-                        <img class="img-fluid mb-4" src="img/team-1.jpg" alt="">
-                        <h5>Alex Rodriguez</h5>
-                        <span class="text-primary">Fundador & CEO</span>
-                        <ul class="team-social">
-                            <li><a class="btn btn-square" href="https://es-la.facebook.com"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a class="btn btn-square" href="https://twitter.com/?lang=es"><i class="fab fa-twitter"></i></a></li>
-                            <li><a class="btn btn-square" href="https://www.instagram.com"><i class="fab fa-instagram"></i></a></li>
-                            <li><a class="btn btn-square" href="https://www.linkedin.com/authwall?trk=qf&original_referer=https://mx.linkedin.com/&sessionRedirect=https%3A%2F%2Fmx.linkedin.com%2F%3Foriginal_referer%3Dhttps%253A%252F%252Fwww.google.com%252F"><i class="fab fa-linkedin-in"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item rounded overflow-hidden pb-4">
-                        <img class="img-fluid mb-4" src="img/team-2.jpg" alt="">
-                        <h5>Roberto Gallegos</h5>
-                        <span class="text-primary">Co Fundador</span>
-                        <ul class="team-social">
-                            <li><a class="btn btn-square" href="https://es-la.facebook.com"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a class="btn btn-square" href="https://twitter.com/?lang=es"><i class="fab fa-twitter"></i></a></li>
-                            <li><a class="btn btn-square" href="https://www.instagram.com"><i class="fab fa-instagram"></i></a></li>
-                            <li><a class="btn btn-square" href="https://www.linkedin.com/authwall?trk=qf&original_referer=https://mx.linkedin.com/&sessionRedirect=https%3A%2F%2Fmx.linkedin.com%2F%3Foriginal_referer%3Dhttps%253A%252F%252Fwww.google.com%252F"><i class="fab fa-linkedin-in"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item rounded overflow-hidden pb-4">
-                        <img class="img-fluid mb-4" src="img/team-3.jpg" alt="">
-                        <h5>Mario Castillo</h5>
-                        <span class="text-primary">Manager Ejecutivo</span>
-                        <ul class="team-social">
-                            <li><a class="btn btn-square" href="https://es-la.facebook.com"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a class="btn btn-square" href="https://twitter.com/?lang=es"><i class="fab fa-twitter"></i></a></li>
-                            <li><a class="btn btn-square" href="https://www.instagram.com"><i class="fab fa-instagram"></i></a></li>
-                            <li><a class="btn btn-square" href="https://www.linkedin.com/authwall?trk=qf&original_referer=https://mx.linkedin.com/&sessionRedirect=https%3A%2F%2Fmx.linkedin.com%2F%3Foriginal_referer%3Dhttps%253A%252F%252Fwww.google.com%252F"><i class="fab fa-linkedin-in"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-item rounded overflow-hidden pb-4">
-                        <img class="img-fluid mb-4" src="img/team-4.jpg" alt="">
-                        <h5>Diego Nodal</h5>
-                        <span class="text-primary">Marketer Digital</span>
-                        <ul class="team-social">
-                            <li><a class="btn btn-square" href="https://es-la.facebook.com"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a class="btn btn-square" href="https://twitter.com/?lang=es"><i class="fab fa-twitter"></i></a></li>
-                            <li><a class="btn btn-square" href="https://www.instagram.com"><i class="fab fa-instagram"></i></a></li>
-                            <li><a class="btn btn-square" href="https://www.linkedin.com/authwall?trk=qf&original_referer=https://mx.linkedin.com/&sessionRedirect=https%3A%2F%2Fmx.linkedin.com%2F%3Foriginal_referer%3Dhttps%253A%252F%252Fwww.google.com%252F"><i class="fab fa-linkedin-in"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Team End -->
+		<!-- Testimonial Start -->
+		<div class="container-xxl pt-5">
+			<div class="container">
+				<div
+					class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp"
+					data-wow-delay="0.1s"
+					style="max-width: 500px"
+				>
+					<p class="fs-5 fw-medium text-primary">Testimonios</p>
+					<h1 class="display-5 mb-5"
+						>¡Lo que nuestros clientes dicen de nosotros!</h1
+					>
+				</div>
+				<div
+					class="owl-carousel testimonial-carousel wow fadeInUp"
+					data-wow-delay="0.1s"
+				>
+					<div class="testimonial-item rounded p-4 p-lg-5 mb-5">
+						<img class="mb-4" src="img/testimonial-1.jpg" alt="" />
+						<p class="mb-4"
+							>Probablemente este ha sido uno de los servicios mas
+							excelentes que me han ofrecido en cuanto ensamblaje
+							de computadoras.</p
+						>
+						<h5>Lorena Sánchez</h5>
+						<span class="text-primary">Youtuber</span>
+					</div>
+					<div class="testimonial-item rounded p-4 p-lg-5 mb-5">
+						<img class="mb-4" src="img/testimonial-2.jpg" alt="" />
+						<p class="mb-4"
+							>Esta empresa esta llena de profesionales, gracias a
+							ellos me he podido construir una computadora que me
+							ha sido de mucha ayuda en el trabajo en el que
+							estoy.</p
+						>
+						<h5>Pedro</h5>
+						<span class="text-primary">Programador Jr.</span>
+					</div>
+					<div class="testimonial-item rounded p-4 p-lg-5 mb-5">
+						<img class="mb-4" src="img/testimonial-3.jpg" alt="" />
+						<p class="mb-4"
+							>Al principio tenia miedo al ensamblar una
+							computadora, por el temor de no hacerlo
+							adecuadamente pero en eXcelPC me brindaron ayuda
+							para no cometer errores y fueron muy
+							serviviciales.</p
+						>
+						<h5>Norberto Morales</h5>
+						<span class="text-primary"
+							>CEO de la empresa NATIIP</span
+						>
+					</div>
+					<div class="testimonial-item rounded p-4 p-lg-5 mb-5">
+						<img class="mb-4" src="img/testimonial-4.jpg" alt="" />
+						<p class="mb-4"
+							>¡Al fin tengo mi PC gamer!, y lo mejor de todo es
+							que en eXcelPC tienen tarjetas gráficas Nvidia
+							listas para ser instaladas y a bajos precios.</p
+						>
+						<h5>María Rodriguez</h5>
+						<span class="text-primary">Universitaria</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Testimonial End -->
 
+		<!-- Footer Start -->
+		<div
+			class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn"
+			data-wow-delay="0.1s"
+		>
+			<div class="container py-5">
+				<div class="row g-5">
+					<div class="col-lg-3 col-md-6">
+						<h4 class="text-white mb-4">Nuestras oficinas</h4>
+						<p class="mb-2"
+							><i class="fa fa-map-marker-alt me-3"></i
+							>Lindavista, CDMX</p
+						>
+						<p class="mb-2"
+							><i class="fa fa-phone-alt me-3"></i>55 4564 5454</p
+						>
+						<p class="mb-2"
+							><i class="fa fa-envelope me-3"></i
+							>excelpc@gmail.com</p
+						>
+						<div class="d-flex pt-3">
+							<a
+								class="btn btn-square btn-light rounded-circle me-2"
+								href="https://twitter.com/?lang=es"
+								><i class="fab fa-twitter"></i
+							></a>
+							<a
+								class="btn btn-square btn-light rounded-circle me-2"
+								href="https://es-la.facebook.com"
+								><i class="fab fa-facebook-f"></i
+							></a>
+							<a
+								class="btn btn-square btn-light rounded-circle me-2"
+								href="https://www.youtube.com"
+								><i class="fab fa-youtube"></i
+							></a>
+							<a
+								class="btn btn-square btn-light rounded-circle me-2"
+								href="https://www.linkedin.com/authwall?trk=qf&original_referer=https://mx.linkedin.com/&sessionRedirect=https%3A%2F%2Fmx.linkedin.com%2F%3Foriginal_referer%3Dhttps%253A%252F%252Fwww.google.com%252F"
+								><i class="fab fa-linkedin-in"></i
+							></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<h4 class="text-white mb-4">Ir a</h4>
+						<a class="btn btn-link" href="about.html"
+							>Sobre nosotros</a
+						>
+						<a class="btn btn-link" href="contact.html"
+							>¡Contactanos!</a
+						>
+						<a class="btn btn-link" href="service.html"
+							>Nuestros servicios</a
+						>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<h4 class="text-white mb-4">Horarios de trabajo</h4>
+						<p class="mb-1">Lunes - Viernes</p>
+						<h6 class="text-light">09:00 am - 07:00 pm</h6>
+						<p class="mb-1">Sabado</p>
+						<h6 class="text-light">09:00 am - 12:00 pm</h6>
+						<p class="mb-1">Domingo</p>
+						<h6 class="text-light">Cerrado</h6>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<h4 class="text-white mb-4">Noticias y avisos</h4>
+						<p
+							>A sus ordenes, ¡Ya abrimos nuestra sucursal en
+							Naucalpan, Edo. Mex. para sus ensamblajes en su
+							equipo de computo!</p
+						>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Footer End -->
 
-    <!-- Testimonial Start -->
-    <div class="container-xxl pt-5">
-        <div class="container">
-            <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s"
-                 style="max-width: 500px;">
-                <p class="fs-5 fw-medium text-primary">Testimonios</p>
-                <h1 class="display-5 mb-5">¡Lo que nuestros clientes dicen de nosotros!</h1>
-            </div>
-            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
-                <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
-                    <img class="mb-4" src="img/testimonial-1.jpg" alt="">
-                    <p class="mb-4">Probablemente este ha sido uno de los servicios mas excelentes que me han ofrecido en cuanto
-                        ensamblaje de computadoras.</p>
-                    <h5>Lorena Sánchez</h5>
-                    <span class="text-primary">Youtuber</span>
-                </div>
-                <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
-                    <img class="mb-4" src="img/testimonial-2.jpg" alt="">
-                    <p class="mb-4">Esta empresa esta llena de profesionales, gracias a ellos me he podido construir una computadora
-                        que me ha sido de mucha ayuda en el trabajo en el que estoy.</p>
-                    <h5>Pedro</h5>
-                    <span class="text-primary">Programador Jr.</span>
-                </div>
-                <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
-                    <img class="mb-4" src="img/testimonial-3.jpg" alt="">
-                    <p class="mb-4">Al principio tenia miedo al ensamblar una computadora, por el temor de no hacerlo adecuadamente
-                        pero en eXcelPC me brindaron ayuda para no cometer errores y fueron muy serviviciales.</p>
-                    <h5>Norberto Morales</h5>
-                    <span class="text-primary">CEO de la empresa NATIIP</span>
-                </div>
-                <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
-                    <img class="mb-4" src="img/testimonial-4.jpg" alt="">
-                    <p class="mb-4">¡Al fin tengo mi PC gamer!, y lo mejor de todo es que en eXcelPC tienen tarjetas
-                        gráficas Nvidia listas para ser instaladas y a bajos precios.</p>
-                    <h5>María Rodriguez</h5>
-                    <span class="text-primary">Universitaria</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Testimonial End -->
+		<!-- Copyright Start -->
+		<div class="container-fluid copyright py-4">
+			<div class="container">
+				<div class="row">
+					<div
+						class="col-md-6 text-center text-md-start mb-3 mb-md-0"
+					>
+						&copy;
+						<a class="fw-medium text-light" href="#">eXcelPC</a>,
+						All Right Reserved.
+					</div>
+					<div class="col-md-6 text-center text-md-end">
+						<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+						Designed By
+						<a
+							class="fw-medium text-light"
+							href="https://htmlcodex.com"
+							>HTML Codex</a
+						>
+						Distributed By
+						<a
+							class="fw-medium text-light"
+							href="https://themewagon.com"
+							>ThemeWagon</a
+						>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Copyright End -->
 
+		<!-- Back to Top -->
+		<a
+			href="#"
+			class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"
+			><i class="bi bi-arrow-up"></i
+		></a>
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Nuestras oficinas</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Lindavista, CDMX</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>55 4564 5454</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>excelpc@gmail.com</p>
-                    <div class="d-flex pt-3">
-                        <a class="btn btn-square btn-light rounded-circle me-2" href="https://twitter.com/?lang=es"><i
-                                class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-light rounded-circle me-2" href="https://es-la.facebook.com"><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-light rounded-circle me-2" href="https://www.youtube.com"><i
-                                class="fab fa-youtube"></i></a>
-                        <a class="btn btn-square btn-light rounded-circle me-2" href="https://www.linkedin.com/authwall?trk=qf&original_referer=https://mx.linkedin.com/&sessionRedirect=https%3A%2F%2Fmx.linkedin.com%2F%3Foriginal_referer%3Dhttps%253A%252F%252Fwww.google.com%252F"><i
-                                class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Ir a</h4>
-                    <a class="btn btn-link" href="about.html">Sobre nosotros</a>
-                    <a class="btn btn-link" href="contact.html">¡Contactanos!</a>
-                    <a class="btn btn-link" href="service.html">Nuestros servicios</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Horarios de trabajo</h4>
-                    <p class="mb-1">Lunes - Viernes</p>
-                    <h6 class="text-light">09:00 am - 07:00 pm</h6>
-                    <p class="mb-1">Sabado</p>
-                    <h6 class="text-light">09:00 am - 12:00 pm</h6>
-                    <p class="mb-1">Domingo</p>
-                    <h6 class="text-light">Cerrado</h6>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Noticias y avisos</h4>
-                    <p>A sus ordenes, ¡Ya abrimos nuestra sucursal en Naucalpan, Edo. Mex. para sus ensamblajes en su equipo de computo!</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Footer End -->
+		<!-- JavaScript Libraries -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="lib/wow/wow.min.js"></script>
+		<script src="lib/easing/easing.min.js"></script>
+		<script src="lib/waypoints/waypoints.min.js"></script>
+		<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+		<script src="lib/lightbox/js/lightbox.min.js"></script>
 
-
-    <!-- Copyright Start -->
-    <div class="container-fluid copyright py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a class="fw-medium text-light" href="#">eXcelPC</a>, All Right Reserved.
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                    Designed By <a class="fw-medium text-light" href="https://htmlcodex.com">HTML Codex</a>
-                    Distributed By <a class="fw-medium text-light" href="https://themewagon.com">ThemeWagon</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Copyright End -->
-
-
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
-            class="bi bi-arrow-up"></i></a>
-
-
-    <!-- JavaScript Libraries -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-</body>
-
+		<!-- Template Javascript -->
+		<script src="js/main.js"></script>
+	</body>
 </html>
