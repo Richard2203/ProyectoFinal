@@ -1,6 +1,6 @@
 # Proyecto Final para la materia de Tecnologías para el Desarrollo de Aplicaciones Web
 
-## INTEGRANTES
+## Integrantes:
   - Castañeda González Giovanni
   - Colin Romero Derek Jacob
   - López García Ricardo
@@ -8,7 +8,7 @@
 ## Grupo
   4CV3
 
-
+## Descripción
 La página web creada se enfoca a la venta y ensamblaje de equipos de cómputo. 
 
 Para la parte del fronted se empelaron las 
