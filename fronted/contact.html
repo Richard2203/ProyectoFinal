@@ -228,13 +228,16 @@
 								>Download Now</a
 							>.</p
 						>
-						<form>
+
+						<!--BEGIN  ---- FORM PARA CONTACTARSE -->
+						<form id="form_contacto">
 							<div class="row g-3">
 								<div class="col-md-6">
 									<div class="form-floating">
 										<input
 											type="text"
 											class="form-control"
+											name="nombre"
 											id="name"
 											placeholder="Your Name"
 										/>
@@ -247,6 +250,7 @@
 											type="email"
 											class="form-control"
 											id="email"
+											name="email"
 											placeholder="Your Email"
 										/>
 										<label for="email">Your Email</label>
@@ -258,6 +262,7 @@
 											type="text"
 											class="form-control"
 											id="subject"
+											name="asunto"
 											placeholder="Subject"
 										/>
 										<label for="subject">Subject</label>
@@ -269,6 +274,7 @@
 											class="form-control"
 											placeholder="Leave a message here"
 											id="message"
+											name="mensaje"
 											style="height: 200px"
 										></textarea>
 										<label for="message">Message</label>
@@ -283,6 +289,7 @@
 								</div>
 							</div>
 						</form>
+						<!--END  ---- FORM PARA CONTACTARSE -->
 					</div>
 					<div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
 						<h3 class="mb-4">Contact Details</h3>
@@ -470,5 +477,6 @@
 
 		<!-- Template Javascript -->
 		<script src="src/animacion.js"></script>
+		<script src="src/contact_API.js"></script>
 	</body>
 </html>
