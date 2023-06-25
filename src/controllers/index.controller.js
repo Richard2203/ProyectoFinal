@@ -48,9 +48,20 @@ const deleteMessageUserById = async (req, res) => {
 	res.json('Mensaje de usuario ' + id + ' eleminado');
 };
 
+const updateMessage = async (req, res) => {
+	const id = req.params.id;
+	const { nombre, email, asunto, mensaje } = req.body;
+	const response = await pool.query(
+		'UPDATE usuario SET nombre=$1, email=$2, asunto=$3, mensaje=$4 WHERE idcliente=$5',
+		[nombre, email, asunto, mensaje, id]
+	);
+	res.json('Mensaje de usuario (' + id + ') actualizado');
+};
+
 module.exports = {
 	getUsers,
 	getMessageUsuarioById,
 	createUsers,
 	deleteMessageUserById,
+	updateMessage,
 };
