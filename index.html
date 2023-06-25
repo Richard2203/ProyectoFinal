@@ -10,6 +10,7 @@
 		<!-- Favicon -->
 		<link href="img/favicon.ico" rel="icon" />
 
+<<<<<<< HEAD
 		<!-- Google Web Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,6 +18,114 @@
 			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@500;700&display=swap"
 			rel="stylesheet"
 		/>
+=======
+    <!-- SCRIPT CONTROL DE COOKIES -->
+    <script type="text/javascript">
+    function controlcookies() {
+             // si variable no existe se crea (al clicar en Aceptar)
+        localStorage.controlcookie = (localStorage.controlcookie || 0);
+
+        localStorage.controlcookie++; // incrementamos cuenta de la cookie
+        cookie1.style.display='none'; // Esconde la política de cookies
+    }
+    </script>
+
+    <!--- Codigo para la política de cookies-->
+    <style type="text/css">
+
+    /* CSS para la animación y localización de los DIV de cookies */
+
+    @keyframes desaparecer
+    {
+    0%		{bottom: 0px;}
+    80%		{bottom: 0px;}
+    100%		{bottom: -50px;}
+    }
+
+    @-webkit-keyframes desaparecer /* Safari and Chrome */
+    {
+    0%		{bottom: 0px;}
+    80%		{bottom: 0px;}
+    100%		{bottom: -50px;}
+    }
+
+    @keyframes aparecer
+    {
+    0%		{bottom: -38px;}
+    10%		{bottom: 0px;}
+    90%		{bottom: 0px;}
+    100%		{bottom: -38px;}
+    }
+
+    @-webkit-keyframes aparecer /* Safari and Chrome */
+    {
+    0%		{bottom: -38px;}
+    10%		{bottom: 0px;}
+    90%		{bottom: 0px;}
+    100%		{bottom: -38px;}
+    }
+    #cookiesms1:target {
+        display: none;
+    }
+    .cookiesms{
+        width:100%;
+        height:120px;
+        margin:0 auto;
+        padding-left:1%;
+            padding-top:5px;
+            font-size:20px;
+        clear:both;
+            font-weight: strong;
+    color: #333;
+    bottom:-50px;
+    position:fixed;
+    left: 0px;
+    background-color: #FFF;
+    opacity:0.7;
+    filter:alpha(opacity=70); /* For IE8 and earlier */
+    transition: bottom 1s;
+    -webkit-transition:bottom 1s; /* Safari */
+    -webkit-box-shadow: 3px -3px 1px rgba(50, 50, 50, 0.56);
+    -moz-box-shadow:    3px -3px 1px rgba(50, 50, 50, 0.56);
+    box-shadow:         3px -3px 1px rgba(50, 50, 50, 0.56);
+    z-index:999999999;
+    }
+
+    .cookiesms:hover{
+    bottom:0px;
+    }
+    .cookies2{
+    background-color: #FFF;
+    display:inline;
+    opacity:0.95;
+    filter:alpha(opacity=95);
+    position:absolute;
+    left:1%;
+    top:-30px;
+    font-size:15px;
+    height:30px;
+    padding-left:25px;
+    padding-right:25px;
+    -webkit-border-top-right-radius: 15px;
+    -webkit-border-top-left-radius: 15px;
+    -moz-border-radius-topright: 15px;
+    -moz-border-radius-topleft: 15px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    -webkit-box-shadow: 3px -3px 1px rgba(50, 50, 50, 0.56);
+    -moz-box-shadow:    3px -3px 1px rgba(50, 50, 50, 0.56);
+    box-shadow:         3px -3px 1px rgba(50, 50, 50, 0.56);
+    }
+
+    /* Fin del CSS para cookies */
+
+</style>
+
+
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+>>>>>>> e6f2eb81b4b50090497163324d41a3a4f7c96d86
 
 		<!-- Icon Font Stylesheet -->
 		<link
@@ -1021,6 +1130,7 @@
 		</div>
 		<!-- Footer End -->
 
+<<<<<<< HEAD
 		<!-- Copyright Start -->
 		<div class="container-fluid copyright py-4">
 			<div class="container">
@@ -1051,6 +1161,21 @@
 			</div>
 		</div>
 		<!-- Copyright End -->
+=======
+    <div class="cookiesms" id="cookie1">
+        Esta web utiliza cookies propias y de terceros para su correcto funcionamiento y para fines analíticos.
+        Al hacer clic en el botón Aceptar, acepta el uso de estas tecnologías y el procesamiento de tus datos para estos propósitos.
+        <a href=http://www.joserodriguez.info/bloc/politica-de-cookies/> Ver politicas de uso.</a> -
+
+        <button onclick="controlcookies()">Aceptar</button>
+        <div  class="cookies2">Políticas de privacidad.</div>
+    </div>
+    <script type="text/javascript">
+        if (!localStorage.controlcookie>0){
+        cookie1.setAttribute("style","animation: desaparecer 5s;-webkit-animation: desaparecer 5s;");
+        }
+    </script>
+>>>>>>> e6f2eb81b4b50090497163324d41a3a4f7c96d86
 
 		<!-- Back to Top -->
 		<a
