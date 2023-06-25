@@ -48,6 +48,14 @@
 
 		<!-- Template Stylesheet -->
 		<link href="css/style.css" rel="stylesheet" />
+
+		<!-- Estilos para la fila al colocar el cursor -->
+		<style>
+			.tabla-fila:hover {
+				background-color: lightgray;
+				cursor: pointer;
+			}
+		</style>
 	</head>
 
 	<body>
@@ -182,182 +190,74 @@
 		</div>
 		<!-- Navbar End -->
 
-		<!-- Page Header Start -->
-		<div
-			class="container-fluid page-header py-5 mb-5 wow fadeIn"
-			data-wow-delay="0.1s"
-		>
-			<div class="container text-center py-5">
-				<h1 class="display-2 text-white mb-4 animated slideInDown"
-					>¡Contactanos!</h1
-				>
-				<nav aria-label="breadcrumb animated slideInDown">
-					<ol class="breadcrumb justify-content-center mb-0">
-						<li class="breadcrumb-item"
-							><a href="index.html">Inicio</a></li
-						>
-						<li class="breadcrumb-item"
-							><a href="about.html">Acerca de</a></li
-						>
-						<li class="breadcrumb-item"
-							><a href="blog.html">Blog</a></li
-						>
-						<li class="breadcrumb-item"
-							><a href="project.html">Proyectos</a></li
-						>
-						<li class="breadcrumb-item"
-							><a href="team.html">Equipo</a></li
-						>
-						<li class="breadcrumb-item"
-							><a href="testimonial.html">Testimonios</a></li
-						>
-						<li
-							class="breadcrumb-item text-primary"
-							aria-current="page"
-							>Contacto</li
-						>
-					</ol>
-				</nav>
-			</div>
-		</div>
-		<!-- Page Header End -->
-
-		<!-- Contact Start -->
-		<div class="container-xxl py-5">
+		<!--CRUD START-->
+		<div class="container-xxl pt-5">
 			<div class="container">
-				<div
-					class="text-center mx-auto wow fadeInUp"
-					data-wow-delay="0.1s"
-					style="max-width: 500px"
-				>
-					<p class="fs-5 fw-medium text-primary">Contactanos</p>
-					<h1 class="display-5 mb-5"
-						>Si tienes cualquier pregunta, por favor contactanos</h1
+				<h1>CRUD - Pedidos</h1>
+				<form id="formulario-pedido">
+					<div class="form-group">
+						<label for="idpedido">ID Pedido:</label>
+						<input
+							type="text"
+							class="form-control"
+							id="idpedido"
+							readonly
+						/>
+					</div>
+					<div class="form-group">
+						<label for="nombrecliente">Nombre Cliente:</label>
+						<input
+							type="text"
+							class="form-control"
+							id="nombrecliente"
+						/>
+					</div>
+					<div class="form-group">
+						<label for="precio">Precio:</label>
+						<input type="text" class="form-control" id="precio" />
+					</div>
+					<div class="form-group">
+						<label for="fecha_entrega">Fecha de Entrega:</label>
+						<input
+							type="text"
+							placeholder="aaaa-mm-dd"
+							class="form-control"
+							id="fecha_entrega"
+						/>
+					</div>
+					<div class="form-group">
+						<label for="descripcion">Descripción:</label>
+						<input
+							type="text"
+							class="form-control"
+							id="descripcion"
+						/>
+					</div>
+					<button
+						type="button"
+						class="btn btn-primary my-3"
+						onclick="agregarPedido()"
+						>Agregar Pedido</button
 					>
-				</div>
-				<div class="row g-5">
-					<div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-						<h3 class="mb-4">¿Necesitas que te contactemos?</h3>
-						<p class="mb-4"
-							>Brindanos la siguiente información que te
-							solicitaremos a continuación y nos pondremos en
-							contacto contigo de inmediato.</p
-						>
+				</form>
 
-						<!-- FORM START-->
-						<form id="form_contacto">
-							<div class="row g-3">
-								<div class="col-md-6">
-									<div class="form-floating">
-										<input
-											type="text"
-											class="form-control"
-											id="name"
-											name="nombre"
-											placeholder="Your Name"
-										/>
-										<label for="name">Tu nombre</label>
-									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="form-floating">
-										<input
-											type="email"
-											class="form-control"
-											id="email"
-											name="email"
-											placeholder="Your Email"
-										/>
-										<label for="email"
-											>Tu correo electrónico</label
-										>
-									</div>
-								</div>
-								<div class="col-12">
-									<div class="form-floating">
-										<input
-											type="text"
-											class="form-control"
-											id="subject"
-											name="asunto"
-											placeholder="Subject"
-										/>
-										<label for="subject">Asunto</label>
-									</div>
-								</div>
-								<div class="col-12">
-									<div class="form-floating">
-										<textarea
-											class="form-control"
-											placeholder="Leave a message here"
-											id="message"
-											name="mensaje"
-											style="height: 200px"
-										></textarea>
-										<label for="message">Mensaje</label>
-									</div>
-								</div>
-								<div class="col-12">
-									<button
-										class="btn btn-primary rounded-pill py-3 px-5"
-										type="submit"
-										>Mandar mensaje</button
-									>
-								</div>
-							</div>
-						</form>
-						<!-- FORM END-->
-					</div>
-					<div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-						<h3 class="mb-4">Detalles del contacto</h3>
-						<div class="d-flex border-bottom pb-3 mb-3">
-							<div
-								class="flex-shrink-0 btn-square bg-primary rounded-circle"
-							>
-								<i class="fa fa-map-marker-alt text-white"></i>
-							</div>
-							<div class="ms-3">
-								<h6>Nuestras oficinas</h6>
-								<span>Lindavista, CDMX</span>
-							</div>
-						</div>
-						<div class="d-flex border-bottom pb-3 mb-3">
-							<div
-								class="flex-shrink-0 btn-square bg-primary rounded-circle"
-							>
-								<i class="fa fa-phone-alt text-white"></i>
-							</div>
-							<div class="ms-3">
-								<h6>Llamanos</h6>
-								<span>55 4564 5454</span>
-							</div>
-						</div>
-						<div class="d-flex border-bottom-0 pb-3 mb-3">
-							<div
-								class="flex-shrink-0 btn-square bg-primary rounded-circle"
-							>
-								<i class="fa fa-envelope text-white"></i>
-							</div>
-							<div class="ms-3">
-								<h6>Envianos un correo</h6>
-								<span>excelpc@gmail.com</span>
-							</div>
-						</div>
-
-						<iframe
-							class="w-100 rounded"
-							src="https://www.google.com/maps/embed/v1/place?q=ESCOM+-+Escuela+Superior+de+Cómputo+-+IPN,+ESCOM+IPN,+Avenida+Juan+de+Dios+Bátiz,+Nueva+Industrial+Vallejo,+Ciudad+de+México,+CDMX,+México&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
-							frameborder="0"
-							style="min-height: 300px; border: 0"
-							allowfullscreen=""
-							aria-hidden="false"
-							tabindex="0"
-						></iframe>
-					</div>
-				</div>
+				<hr />
+				<table class="table" id="tabla-pedidos">
+					<thead class="thead-dark">
+						<tr>
+							<th>ID Pedido</th>
+							<th>Nombre Cliente</th>
+							<th>Precio</th>
+							<th>Fecha de Entrega</th>
+							<th>Descripción</th>
+							<th>Acciones</th>
+						</tr>
+					</thead>
+					<tbody id="tabla-cuerpo"> </tbody>
+				</table>
 			</div>
 		</div>
-		<!-- Contact End -->
+		<!--CRUD END-->
 
 		<!-- Footer Start -->
 		<div
@@ -484,7 +384,7 @@
 		<script src="lib/lightbox/js/lightbox.min.js"></script>
 
 		<!-- Template Javascript -->
+		<script src="js/crud_admi_API.js"></script>
 		<script src="js/main.js"></script>
-		<script src="js/contact_API.js"></script>
 	</body>
 </html>
